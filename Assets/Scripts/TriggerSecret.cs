@@ -27,11 +27,9 @@ public class TriggerSecret : MonoBehaviour
     {
         if (TimerTime == true)
         {
-            Debug.Log("Sit");
             Timer -= Time.deltaTime;
             if (Timer <= 0)
             {
-                Debug.Log("Hit");
                 SceneManager.LoadScene("TriggerTest");
             }
         }

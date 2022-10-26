@@ -8,6 +8,7 @@ public class RisingPlatformTrigger : MonoBehaviour
     public GameObject RiseText;
     public GameObject Secret;
     private Animator PlatformAnimation;
+    public MeshRenderer TriggerRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,6 @@ public class RisingPlatformTrigger : MonoBehaviour
         RiseText.SetActive(false);
         Secret.SetActive(false);
         PlatformAnimation.enabled = true;
+        TriggerRenderer.enabled = false;
     }
 }

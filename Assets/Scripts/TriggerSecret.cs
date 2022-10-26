@@ -14,6 +14,7 @@ public class TriggerSecret : MonoBehaviour
     public Material Black;
     public Light Stop;
     public Light Go;
+    private bool TriggerStopper;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +39,19 @@ public class TriggerSecret : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Huh.SetActive(true);
-        Ye.SetActive(true);
-        Oh.Play();
-        Bruh.enabled = false;
-        RenderSettings.skybox = Black;
-        Stop.enabled = false;
-        Go.enabled = true;
-        Timer = 11;
-        TimerTime = true;
+        if (TriggerStopper == false)
+        {
+            Huh.SetActive(true);
+            Ye.SetActive(true);
+            Oh.Play();
+            Bruh.enabled = false;
+            RenderSettings.skybox = Black;
+            Stop.enabled = false;
+            Go.enabled = true;
+            Timer = 13;
+            TimerTime = true;
+            TriggerStopper = true;
+        }
+        
     }
 }
